@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "enderman:sapphire_block",
+    "enderman:sapphire_ore",
+    "enderman:deepslate_sapphire_ore"
+  ]
+}

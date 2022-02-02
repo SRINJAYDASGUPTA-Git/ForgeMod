@@ -12,6 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.theendermanguy.enderman.EndermansSapphireForge;
+import net.theendermanguy.enderman.item.ModCreativeModeTab;
 import net.theendermanguy.enderman.item.ModItems;
 
 import java.util.function.Supplier;
@@ -21,7 +22,13 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, EndermansSapphireForge.MOD_ID);
 
     public static final RegistryObject<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block",
-            ()->new Block(BlockBehaviour.Properties.of(Material.METAL).strength(3.0f).requiresCorrectToolForDrops().sound(SoundType.METAL)), CreativeModeTab.TAB_MISC);
+            ()->new Block(BlockBehaviour.Properties.of(Material.METAL).strength(3.0f).requiresCorrectToolForDrops().sound(SoundType.METAL)), ModCreativeModeTab.ENDERMANS_TAB);
+
+    public static final RegistryObject<Block> SAPPHIRE_ORE = registerBlock("sapphire_ore",
+            ()->new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.0f).requiresCorrectToolForDrops().sound(SoundType.STONE)), ModCreativeModeTab.ENDERMANS_TAB);
+
+    public static final RegistryObject<Block> DEEPSLATE_SAPPHIRE_ORE = registerBlock("deepslate_sapphire_ore",
+            ()->new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.0f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)), ModCreativeModeTab.ENDERMANS_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
@@ -34,8 +41,6 @@ public class ModBlocks {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(tab)));
     }
-//    public static final RegistryObject<Block> SAPPHIRE_BLOCK = BLOCKS.register("sapphire",
-//            ()-> new Block(new Block());
 
     public static void register(IEventBus eventBus){
         BLOCKS.register(eventBus);
