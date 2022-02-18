@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    " @ ",
+    " $ "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bread"
+    },
+    "$": {
+      "item": "minecraft:cooked_beef"
+    },
+    "@": {
+      "item": "enderman:cheese"
+    }
+  },
+  "result": {
+    "item": "enderman:hamburger"
+  }
+}

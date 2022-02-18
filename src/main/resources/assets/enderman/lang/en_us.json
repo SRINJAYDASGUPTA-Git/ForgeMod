@@ -1,6 +1,12 @@
 {
   "item.enderman.sapphire": "Sapphire",
+  "item.enderman.sapphire_staff": "Sapphire Staff",
+  "item.enderman.sapphire_staff.no_valuables": "No Valuables Found!",
+  "item.enderman.cheese": "Cheese",
+  "item.enderman.hamburger": "Hamburger",
+
   "block.enderman.sapphire_block": "Sapphire Block",
+  "block.enderman.jump_block": "Jump Block",
   "block.enderman.sapphire_ore": "Sapphire Ore",
   "block.enderman.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
 

@@ -12,6 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.theendermanguy.enderman.EndermansSapphireForge;
+import net.theendermanguy.enderman.block.custom.JumpBlock;
 import net.theendermanguy.enderman.item.ModCreativeModeTab;
 import net.theendermanguy.enderman.item.ModItems;
 
@@ -29,6 +30,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> DEEPSLATE_SAPPHIRE_ORE = registerBlock("deepslate_sapphire_ore",
             ()->new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.0f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)), ModCreativeModeTab.ENDERMANS_TAB);
+
+    public static final RegistryObject<Block> JUMP_BLOCK = registerBlock("jump_block",
+            ()->new JumpBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.SLIME_BLOCK)), ModCreativeModeTab.ENDERMANS_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

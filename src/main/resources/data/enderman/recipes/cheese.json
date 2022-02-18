@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "minecraft:milk_bucket"
+  },
+  "result": "enderman:cheese",
+  "experience": 10,
+  "cookingtime": 200
+}
