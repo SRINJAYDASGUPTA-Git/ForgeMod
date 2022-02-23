@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.theendermanguy.enderman.EndermansSapphireForge;
+import net.theendermanguy.enderman.item.custom.CokeItem;
 import net.theendermanguy.enderman.item.custom.SapphireStaffItem;
 
 public class ModItems {
@@ -17,12 +18,18 @@ public class ModItems {
 
     public static final RegistryObject<Item> SAPPHIRE_STAFF = ITEMS.register("sapphire_staff",
             ()-> new SapphireStaffItem(new Item.Properties().tab(ModCreativeModeTab.ENDERMANS_TAB).durability(350)));
+
     public static final RegistryObject<Item> CHEESE = ITEMS.register("cheese",
             ()-> new Item(new Item.Properties().tab(ModCreativeModeTab.ENDERMANS_TAB).food(ModFoods.CHEESE)));
+
     public static final RegistryObject<Item> HAMBURGER = ITEMS.register("hamburger",
             ()-> new Item(new Item.Properties().tab(ModCreativeModeTab.ENDERMANS_TAB).food(ModFoods.HAMBURGER)));
 
+    public static final RegistryObject<Item> COKE = ITEMS.register("coke",
+            ()-> new CokeItem(new Item.Properties().tab(ModCreativeModeTab.ENDERMANS_TAB)));
+
     public static void register(IEventBus eventBus){
+
         ITEMS.register(eventBus);
     }
 }

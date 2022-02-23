@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:coal"
+  },
+  "result": "enderman:coke",
+  "experience": 10,
+  "cookingtime": 100
+}
