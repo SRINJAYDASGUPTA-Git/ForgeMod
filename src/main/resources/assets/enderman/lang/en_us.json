@@ -11,6 +11,12 @@
   "block.enderman.sapphire_ore": "Sapphire Ore",
   "block.enderman.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
 
+  "block.enderman.sapphire_stairs": "Sapphire Stairs",
+  "block.enderman.sapphire_slab": "Sapphire Slab",
+  "block.enderman.sapphire_wall": "Sapphire Wall",
+  "block.enderman.sapphire_fence": "Sapphire Fence",
+  "block.enderman.sapphire_fence_gate": "Sapphire Fence Gate",
+
   "itemGroup.endermanstab": "Enderman's Sapphire",
 
   "tooltip.enderman.sapphire_staff.tooltip.shift": "Right Click to find Valuables!",

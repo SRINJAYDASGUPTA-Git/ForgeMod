@@ -3,8 +3,7 @@ package net.theendermanguy.enderman.block;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -34,8 +33,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> JUMP_BLOCK = registerBlock("jump_block",
             ()->new JumpBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.SLIME_BLOCK)), ModCreativeModeTab.ENDERMANS_TAB);
 
-    public static final RegistryObject<Block> REDSTONE_TABLE = registerBlock("redstone_table",
-            ()->new JumpBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(1.0f).requiresCorrectToolForDrops().sound(SoundType.WOOD)), ModCreativeModeTab.ENDERMANS_TAB);
+//
+    public static final RegistryObject<Block> SAPPHIRE_STAIRS = registerBlock("sapphire_stairs",
+        ()->new StairBlock(() ->ModBlocks.SAPPHIRE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.METAL).strength(1.0f).requiresCorrectToolForDrops().sound(SoundType.METAL)), ModCreativeModeTab.ENDERMANS_TAB);
+    public static final RegistryObject<Block> SAPPHIRE_SLAB = registerBlock("sapphire_slab",
+            ()->new SlabBlock(BlockBehaviour.Properties.of(Material.METAL).strength(1.0f).requiresCorrectToolForDrops().sound(SoundType.METAL)), ModCreativeModeTab.ENDERMANS_TAB);
+    public static final RegistryObject<Block> SAPPHIRE_WALL = registerBlock("sapphire_wall",
+            ()->new WallBlock(BlockBehaviour.Properties.of(Material.METAL).strength(1.0f).requiresCorrectToolForDrops().sound(SoundType.METAL)), ModCreativeModeTab.ENDERMANS_TAB);
+    public static final RegistryObject<Block> SAPPHIRE_FENCE = registerBlock("sapphire_fence",
+            ()->new FenceBlock(BlockBehaviour.Properties.of(Material.METAL).strength(1.0f).requiresCorrectToolForDrops().sound(SoundType.METAL)), ModCreativeModeTab.ENDERMANS_TAB);
+    public static final RegistryObject<Block> SAPPHIRE_FENCE_GATE = registerBlock("sapphire_fence_gate",
+            ()->new FenceGateBlock(BlockBehaviour.Properties.of(Material.METAL).strength(1.0f).requiresCorrectToolForDrops().sound(SoundType.METAL)), ModCreativeModeTab.ENDERMANS_TAB);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

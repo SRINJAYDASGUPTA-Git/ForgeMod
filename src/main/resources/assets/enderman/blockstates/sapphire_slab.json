@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enderman:block/sapphire_slab"
+    },
+    "type=double": {
+      "model": "enderman:block/sapphire_block"
+    },
+    "type=top": {
+      "model": "enderman:block/sapphire_slab_top"
+    }
+  }
+}
