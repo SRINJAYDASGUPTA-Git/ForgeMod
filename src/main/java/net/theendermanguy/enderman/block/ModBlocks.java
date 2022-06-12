@@ -34,6 +34,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> JUMP_BLOCK = registerBlock("jump_block",
             ()->new JumpBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.SLIME_BLOCK)), ModCreativeModeTab.ENDERMANS_TAB);
 
+    public static final RegistryObject<Block> REDSTONE_TABLE = registerBlock("redstone_table",
+            ()->new JumpBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(1.0f).requiresCorrectToolForDrops().sound(SoundType.WOOD)), ModCreativeModeTab.ENDERMANS_TAB);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);

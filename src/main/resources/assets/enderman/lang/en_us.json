@@ -11,5 +11,9 @@
   "block.enderman.sapphire_ore": "Sapphire Ore",
   "block.enderman.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
 
-  "itemGroup.endermanstab": "Enderman's Sapphire"
+  "itemGroup.endermanstab": "Enderman's Sapphire",
+
+  "tooltip.enderman.sapphire_staff.tooltip.shift": "Right Click to find Valuables!",
+  "tooltip.enderman.sapphire_staff.tooltip": "Press §b§oSHIFT§r for more Information",
+
 }
